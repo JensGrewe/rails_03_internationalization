@@ -17,13 +17,19 @@
 
 <p>
   <strong>Date:</strong>
-  <%= @reference.date %>
+  <%= l(@reference.date) %>
 </p>
 
 <p>
   <strong>Notes:</strong>
   <%= @reference.notes %>
 </p>
+<p>
+  <strong>Price:</strong>
+  <%= @reference.price %>
+  <%= number_to_currency(@reference.price) %>
+</p>
+
 
 <%= link_to 'Edit', edit_reference_path(@reference) %> |
 <%= link_to 'Back', references_path %>

@@ -1,4 +1,4 @@
-<h1>Listing references</h1>
+<h1><%= t('.title')%></h1>
 
 <table>
   <thead>
@@ -22,9 +22,9 @@
         <td><%= reference.url %></td>
         <td><%= reference.date %></td>
         <td><%= reference.notes %></td>
-        <td><%= link_to 'Show', reference %></td>
-        <td><%= link_to 'Edit', edit_reference_path(reference) %></td>
-        <td><%= link_to 'Destroy', reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('.show'), reference %></td>
+        <td><%= link_to t('.edit'), edit_reference_path(reference) %></td>
+        <td><%= link_to t('.destroy_html'), reference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

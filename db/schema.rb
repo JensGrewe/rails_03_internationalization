@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130606220930) do
+ActiveRecord::Schema.define(version: 20130606231351) do
 
   create_table "references", force: true do |t|
     t.string   "author"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130606220930) do
     t.text     "notes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.decimal  "price"
   end
 
 end
