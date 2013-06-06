@@ -2,6 +2,15 @@
 <html>
 <head>
   <title><%= t('.title') %></title>
+  <div id="banner">
+    <%= form_tag references_path, class: 'locale', method: 'GET' do %>
+      <%= select_tag 'set_locale',
+      options_for_select(LANGUAGES, I18n.locale.to_s),
+      onchange: 'this.form.submit()' %>
+      <%= submit_tag 'submit' %>
+      <%= javascript_tag "$('.locale input').hide()" %>
+    <% end %>
+  </div>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>

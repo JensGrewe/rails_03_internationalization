@@ -4,7 +4,11 @@ class ReferencesController < ApplicationController
   # GET /references
   # GET /references.json
   def index
-    @references = Reference.all
+    if params[:set_locale]
+      redirect_to references_path(locale: params[:set_locale])
+    else
+      @references = Reference.all
+    end
   end
 
   # GET /references/1
